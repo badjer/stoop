@@ -26,7 +26,7 @@
 (defn parse-quote [sym quotestring]
 	"Converts a quotestring into a map of data that can be used with the db"
 	(let [strs (rest (string/split-lines quotestring))
-			parts (fn [line] (string/split #"," line))
+			parts (fn [line] (string/split line #","))
 			dict (fn [ps] (hash-map 
 				:symbol sym
 				:date (sql_date (first ps))
