@@ -3,7 +3,8 @@
 	(:import [java.sql.Date]
 			[org.joda.time LocalDate])
 	(:require [clojure-yahoo-finance.core :as finance]
-				[clojure.contrib.string :as string]))
+				[stoop.symbols :as symbols]
+				[clojure.string :as string]))
 
 (def db {:classname "org.postgresql.Driver"
 		:subprotocol "postgresql"
